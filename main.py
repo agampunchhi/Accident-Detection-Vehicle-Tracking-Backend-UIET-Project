@@ -8,7 +8,6 @@ import os
 
 app = flask.Flask(__name__)
 
-#dbURL = 'postgres://dlwpsdqlbbjaas:ea99fb79cf03bb30c451a39c68ed247c46afe5d9f994b1ebaaa2a6cbe334bde1@ec2-54-170-90-26.eu-west-1.compute.amazonaws.com:5432/da442gu9qvkjq'
 dbURL = os.environ.get['DATABASE_URL']
 
 @app.route('/updateLocation', methods=['GET'])
