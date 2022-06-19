@@ -1,5 +1,4 @@
 import flask
-from flask_session import Session
 from pytz import timezone
 from flask import request, jsonify
 import psycopg2
