@@ -7,7 +7,7 @@ import os
 
 app = flask.Flask(__name__)
 
-dbURL = os.environ.get['DATABASE_URL']
+dbURL = os.environ.get('DATABASE_URL')
 
 @app.route('/updateLocation', methods=['GET'])
 def updateLocation():
