@@ -1,6 +1,7 @@
 import flask
 from pytz import timezone
 from flask import request, jsonify
+from flask_cors import CORS
 import psycopg2
 import datetime
 import os
@@ -75,5 +76,6 @@ def init():
 #app.run()
 if __name__ == "__main__":
     init()
+    CORS(app)
     app.debug = False
     app.run("0.0.0.0",port=5000,threaded=True)
