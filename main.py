@@ -9,6 +9,7 @@ import os
 app = flask.Flask(__name__)
 
 dbURL = os.environ.get('DATABASE_URL')
+port = int(os.environ.get('PORT', 5000))
 
 @app.route('/updateLocation', methods=['GET'])
 def updateLocation():
@@ -78,4 +79,4 @@ if __name__ == "__main__":
     init()
     CORS(app)
     app.debug = False
-    app.run("0.0.0.0",port=process.env.PORT,threaded=True)
+    app.run("0.0.0.0",port=port,threaded=True)
